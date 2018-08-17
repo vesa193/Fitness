@@ -1,0 +1,460 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+
+
+// Defined values
+$screen-xs-min: 320px;
+$screen-helper: 500px;
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+$screen-helper2: 1500px;
+
+@media all and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) 
+
+    .card
+        padding: 20px
+        z-index: 999
+
+
+    .card-green
+        padding: 20px
+        z-index: 999
+
+    //header
+    .header
+        height: 480px
+    
+    //nav
+    .nav
+
+        &__items
+            background: $ftr-bg
+            display: flex
+            flex-direction: column
+            padding: 40px
+            align-items: baseline
+            justify-content: space-between
+            height: 0
+            width: 100%
+            position: absolute
+            top: 90px
+            left: 0
+            opacity: 0
+            +transition(all, .4s, ease-in-out)
+
+            &--open
+                height: 390px
+                opacity: 1
+                +transition(all, .4s, ease-in-out)
+    //boxes
+    .boxes
+
+        &__wrap
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
+            grid-template-rows: repeat(4,auto)
+            grid-template-areas: "img1 img2" "box1 box2" "img3 img4" "box3 box4"
+            padding: 0 20px
+
+        &__card
+
+            &--1
+                img
+                    top: 20px
+                    right: 20px
+
+
+            &--3
+                img
+                    top: 20px
+                    right: 20px
+
+            &--4
+                img
+                    top: 40px
+                    right: 20px
+
+
+
+
+
+
+    //features
+    .features
+        padding: 80px 20px
+
+    //gridone
+    .gridone
+        width: 100%
+        padding: 0 20px
+        overflow: hidden
+        
+        &__wrap
+            grid-template-areas: "box1 img1" "img2 box2"        
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+
+        &__img
+
+        &__desc
+            
+            &--1
+                p
+                    margin: 0 20px 20px 0
+                    
+            &--2
+                p
+                    margin: 0 0 20px 20px
+
+                
+
+    .card
+
+
+    .aboveftr
+        height: 480px
+
+        &__text
+            width: 100%
+            text-align: center
+            padding: 0 20px
+
+
+    .footer
+        padding: 40px 20px
+
+        &__wrap
+            width: 100%
+
+        &__cards
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+
+        &__inputs
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: 130px
+
+
+@media all and  (max-width: $screen-helper)
+    .card
+        padding: 20px
+
+    .gridone
+        
+        &__wrap
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
+            grid-template-rows: repeat(4, auto)
+            grid-template-areas: "box1" "img1" "img2" "box2"
+            
+
+        &__desc
+            height: 200px
+            
+
+    //boxes
+    .boxes
+
+        &__wrap
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
+            grid-template-rows: repeat(6,auto)
+            grid-template-areas: "img1" "img2" "box1" "box2" "img3" "img4" "box3" "box4"
+            padding: 0 20px
+
+    //aboveftr
+    .aboveftr
+        height: 480px
+
+    
+    //footer
+    .footer
+        padding: 40px 20px
+
+        &__wrap
+            width: 100%
+
+        &__inputs
+            
+
+            input
+                display: block
+                margin-bottom: 5px
+
+            a
+                display: block
+
+        &__card
+
+            &__icons
+                width: 100%
+                padding-right: 20px
+
+        //features
+        .features
+
+            &__wrap
+                width: 100%
+                padding: 40px 20px
+
+        .boxes
+
+            &__wrap
+                width: 100%
+                display: grid
+                grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
+                grid-template-rows: repeat(6,auto)
+                grid-template-areas: "img1" "img2" "box1" "box2" "img3" "img4" "box3" "box4"
+                padding: 0 20px
+
+            &__card
+
+            &__br
+                display: block
+
+        //footer
+        .footer
+
+            &__inputs
+                
+                input
+                    width: 100%
+                    display: block
+                a
+                    display: block
+
+
+
+//small devices (tablet, notebook)
+
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) 
+    //default
+
+    .card
+        padding: 20px
+    //nav
+    .nav
+
+        &__items
+            background: $ftr-bg
+            display: flex
+            flex-direction: column
+            padding: 40px
+            align-items: baseline
+            justify-content: space-between
+            height: 0
+            width: 100%
+            position: absolute
+            top: 90px
+            left: 0
+            opacity: 0
+            +transition(all, .3s, ease-in-out)
+
+            &--open
+                height: 390px
+                opacity: 1
+                +transition(all, .3s, ease-in-out)
+
+            
+    //header
+    .header
+     height: 600px
+
+     //gridone
+    .gridone
+        width: 100%
+        display: flex
+        justify-content: center
+        padding: 0 20px
+
+        &__wrap
+            width: 100%
+            grid-template-areas: "box1 img1" "img2 box2"
+            grid-template-columns: repeat(auto-fit,minmax(250px,auto))
+            
+    .features
+        padding: 0 
+        
+
+        &__wrap
+            width: 100%
+            padding: 40px 20px
+
+    .boxes
+
+        &__wrap
+            width: 100%
+            display: grid
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
+            grid-template-rows: repeat(4,auto)
+            grid-template-areas: "img1 img2" "box1 box2" "img3 img4" "box3 box4"
+            padding: 0 20px
+
+        &__card
+
+            &__br
+                display: block
+
+    //aboveftr
+    .aboveftr
+        height: 480px
+
+    //footer
+    .footer
+        padding: 40px 20px
+
+        &__wrap
+            width: 100%
+
+        &__cards
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+
+        &__card
+
+            &__icons
+                width: 100%
+            
+ 
+
+//medium devices (laptop)
+
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max)
+
+    //header
+    .header
+        height: 891px
+
+    .nav
+
+        &__hamburger
+            display: none
+
+    //gridone
+    .gridone
+        width: 100%
+        display: flex
+        justify-content: center
+        //padding: 0 20px
+
+        &__wrap
+            width: 80%
+            grid-template-areas: "box1 img1" "img2 box2"
+            grid-template-columns: repeat(auto-fill,minmax(300px,1fr))    
+
+
+    //boxes
+    .boxes
+
+        &__wrap
+            width: 80%
+            display: grid
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr))
+            grid-template-rows: repeat(4,auto)
+            grid-template-areas: "img1 img2" "box1 box2" "img3 img4" "box3 box4"
+
+        &__card
+
+            &__br
+                display: none
+
+    //footer
+    .footer
+        padding: 40px 20px
+
+        &__wrap
+            width: 80%
+
+        &__cards
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+
+        &__card
+
+            &__icons
+                width: 100%
+
+
+//large screens
+@media all and (min-width: $screen-lg-min)
+    //header
+    .header
+        height: 891px
+
+    .nav
+
+        &__hamburger
+            display: none
+
+    //features
+    .features
+
+        &__wrap
+            width: 80%
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+            grid-gap: 20px
+
+
+    //gridone
+    .gridone
+        width: 100%
+
+        &__wrap
+            width: 80%
+            grid-template-areas: "box1 img1 img1" "img2 img2 box2"
+            grid-template-columns: repeat(auto-fill,minmax(300px,auto))
+
+    //boxes
+    .boxes
+        &__wrap
+            width: 80%
+            display: grid
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+            grid-template-rows: repeat(4, auto)
+            grid-template-areas: "img1 img2 img2" "box1 box2 box2" "img3 img3 img4" "box3 box3 box4"
+
+        &__card
+
+            &__br
+                display: none
+
+
+    //footer
+    .footer
+
+        &__wrap
+            width: 80%
+
+        &__cards
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+            
+
+
+@media all and  (min-width: $screen-helper2)
+    //gridone
+    .gridone
+        width: 100%
+
+        &__wrap
+            width: 80%
+            grid-template-areas: "box1 img1 img1" "img2 img2 box2"
+            grid-template-columns: repeat(auto-fill,minmax(400px,auto))
+
+    //boxes
+    .boxes
+        &__wrap
+            width: 80%
+            display: grid
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+            grid-template-rows: repeat(4, auto)
+            grid-template-areas: "img1 img2 img2" "box1 box2 box2" "img3 img3 img4" "box3 box3 box4"
+
+
+        &__card
+
+            &__br
+                display: none

@@ -1,0 +1,24 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.button
+    padding: 10px 20px
+    background: $green
+    color: white
+    font-family: $second-font
+    border-radius: 2px
+    margin-left: 5px
+    font-size: .9em
+    font-family: $base-font
+    font-weight: bold
+
+    img
+        opacity: 1
+
+    &:hover, &focus
+        color: #212121
+
+        img
+            transform: translateX(20px)
+            opacity: 0
+            +transition(all, .3s, ease-in-out)

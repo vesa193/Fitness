@@ -1,0 +1,131 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.boxes
+    display: flex
+    justify-content: center
+    background: $orange
+
+    &__wrap
+        width: 80%
+        display: grid
+        
+
+
+    &__img
+        position: relative
+        
+        img
+            //width: 100%
+
+        &--1
+            width: 100%
+            height: 100%
+            grid-area: img1
+
+            
+
+
+        &--2
+            position: relative
+            grid-area: img2
+
+            .boxes__img__desc
+                position: absolute
+                width: 100%
+                top: 0
+                display: flex
+                justify-content: space-around
+                padding: 20px
+                font-size: .9em
+                z-index: 100
+
+
+        &--img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            
+
+                
+
+        &--3
+            grid-area: img3
+            width: 100%
+            height: 100%
+
+        &--4
+            grid-area: img4
+            width: 100%
+            height: 100%
+
+    &__card
+
+        &--1
+            position: relative
+            grid-area: box1
+            display: flex
+            align-items: flex-start !important
+            text-align: left !important
+
+            h3, h6
+                text-align: left !important
+
+            p
+                margin-top: 40px
+
+
+            img
+                position: absolute
+                top: 40px
+                right: 40px
+
+        &--2
+            grid-area: box2
+            display: flex
+            align-items: flex-start !important
+            text-align: left !important
+            box-shadow: 1px 1px 45px black
+
+            h3, h6
+                text-align: left !important
+
+            p
+                margin-top: 40px
+
+        &--3
+            grid-area: box3
+            display: flex
+            align-items: flex-start !important
+            text-align: left !important
+
+            h3, h6
+                text-align: left !important
+
+            p
+                margin-top: 40px
+
+            img
+                position: absolute
+                top: 40px
+                right: 40px
+        
+        &--4
+            grid-area: box4
+            display: flex
+            align-items: flex-start !important
+            text-align: left !important
+
+            h3, h6
+                text-align: left !important
+                color: white
+
+            p
+                margin-top: 40px
+
+            img
+                position: absolute
+                top: 80px
+                right: 40px

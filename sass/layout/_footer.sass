@@ -1,0 +1,44 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.footer
+    position: relative
+    background: $ftr-bg
+    padding: 40px 0 300px 0
+    display: flex
+    justify-content: center
+
+    &__wrap
+        //width: 80%
+
+    &__cards
+        display: grid
+        //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+        grid-gap: 40px
+
+    &__card
+
+        p
+            color: gray
+            margin-top: 20px
+
+        &__icons
+            width: 80%
+            display: flex
+            justify-content: space-between
+            margin-top: 20px
+
+    &__inputs
+        text-align: right
+        margin-top: 40px
+        
+
+        input
+            border: none
+            border-radius: 2px
+            padding: 10px 20px
+            margin-left: 5px
+
+            
+               
+                

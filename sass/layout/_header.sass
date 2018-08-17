@@ -1,0 +1,58 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.header
+    //height: 891px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    +background('../img/bg-hero.jpg', center, no-repeat)
+    background-size: cover
+    padding: 40px 0 150px 0
+
+    &__content
+        display: flex
+        justify-content: center
+        
+
+
+    &__title
+        width: 80%
+       
+
+        h2
+            span
+                color: $green
+
+        h5
+            padding-left: 90px
+           
+            span
+                color: $orange
+
+.nav
+    display: flex
+    justify-content: center
+
+    &__wrap
+        width: 90%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__logo
+
+
+    &__items
+        width: 50%
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+
+        li
+            a
+                color: white
+
+                &:hover, &:focus
+                    color: $green
